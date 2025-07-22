@@ -1,5 +1,6 @@
-FROM openjdk:17
-EXPOSE 8080
+FROM openjdk:17-jdk-slim
 WORKDIR /usr/app
-COPY target/spring-boot-mysql.jar spring-boot-mysql.jar
-ENTRYPOINT ["java","-jar", "spring-boot-mysql.jar"]
+COPY target/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
