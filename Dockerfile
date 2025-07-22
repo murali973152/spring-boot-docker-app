@@ -1,6 +1,4 @@
-FROM openjdk:11
-MAINTAINER "Ashok Bollepalli <797979>"
-COPY target/spring-boot-docker-app.jar spring-boot-docker-app.jar
-
+ROM openjdk:17
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "spring-boot-docker-app.jar"]
+COPY target/spring-boot-mysql.jar spring-boot-mysql.jar
+ENTRYPOINT ["java","-jar","/spring-boot-mysql.jar"]
